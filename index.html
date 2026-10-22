@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CodeStart — онлайн-курсы программирования. Обучение с нуля до первого оффера." />
+  <title>CodeStart — Курсы программирования</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230b0f14'/><text x='18' y='68' font-size='48' font-family='monospace' fill='%233df08a'>&gt;_</text></svg>" />
+<base target="_blank">
+</head>
+<script src="script.js"></script>
+<body>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo" aria-label="CodeStart — на главную">
+        <span class="logo__icon">&lt;/&gt;</span>
+        <span class="logo__text">CodeStart</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#program">Программа</a></li>
+          <li><a class="nav__link" href="#modules">Модули</a></li>
+          <li><a class="nav__link" href="#features">Преимущества</a></li>
+          <li><a class="nav__link nav__link--cta" href="#register">Регистрация</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Переключить тему">
+          <span class="theme-toggle__icon" id="themeIcon">🌙</span>
+        </button>
+        <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__content">
+          <p class="hero__badge">Набор открыт • старт 1 ноября 2026</p>
+          <h1 class="hero__title">Научитесь программировать <span class="accent">с нуля до первого оффера</span></h1>
+          <p class="hero__text">
+            Практические онлайн-курсы фронтенда и Python. Пишете код с первого урока,
+            собираете портфолио из 5 проектов и готовитесь к собеседованиям вместе с ментором.
+          </p>
+          <div class="hero__buttons">
+            <a href="#register" class="btn btn--primary">Записаться на курс</a>
+            <a href="#program" class="btn btn--ghost">Смотреть программу</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong data-counter="4200">0</strong><span>выпускников</span></li>
+            <li><strong data-counter="94">0</strong><span>% трудоустройства</span></li>
+            <li><strong data-counter="9">0</strong><span>месяцев обучения</span></li>
+          </ul>
+        </div>
+        <div class="hero__card" aria-hidden="true">
+          <pre class="code-card"><code><span class="c-kw">const</span> <span class="c-var">student</span> = {
+  name: <span class="c-str">"Вы"</span>,
+  skills: [<span class="c-str">"HTML"</span>, <span class="c-str">"CSS"</span>, <span class="c-str">"JS"</span>],
+  goal: <span class="c-str">"job"</span>
+};
+
+<span class="c-kw">while</span> (!<span class="c-var">student</span>.hired) {
+  <span class="c-fn">learn</span>();
+  <span class="c-fn">practice</span>();
+  <span class="c-fn">repeat</span>();
+}</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <h2 class="section__title">Почему выбирают CodeStart</h2>
+        <p class="section__subtitle">Мы делаем акцент на практике, а не на скучных лекциях</p>
+
+        <div class="features__grid">
+          <article class="card">
+            <div class="card__icon"><img src="icons8-ракета-48.png"> </div>
+            <h3 class="card__title">Практика с первого дня</h3>
+            <p class="card__text">80% курса — это написание кода. Теория подаётся короткими блоками и сразу закрепляется задачами.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"> <img src="icons8-учитель-48.png"> </div>
+            <h3 class="card__title">Личный ментор</h3>
+            <p class="card__text">Ревью кода в течение 24 часов, разбор ошибок и помощь с проектами — на каждом этапе обучения.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><img src="icons8-трудоустройство-48.png"></div>
+            <h3 class="card__title">Трудоустройство</h3>
+            <p class="card__text">Помогаем с резюме, портфолио и подготовкой к собеседованиям у партнёрских компаний.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon"><img src="icons8-сертификат-48.png"></div>
+            <h3 class="card__title">Сертификат</h3>
+            <p class="card__text">По итогам защиты дипломного проекта вы получаете сертификат, подтверждающий ваши навыки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section modules" id="modules">
+      <div class="container">
+        <h2 class="section__title">Направления обучения</h2>
+        <p class="section__subtitle">Выберите свой модуль — или пройдите полный курс</p>
+
+        <div class="modules__filters" id="modulesFilters">
+          <button class="chip chip--active" data-filter="all" type="button">Все</button>
+          <button class="chip" data-filter="frontend" type="button">Фронтенд</button>
+          <button class="chip" data-filter="backend" type="button">Бэкенд</button>
+          <button class="chip" data-filter="data" type="button">Аналитика</button>
+        </div>
+
+        <div class="modules__grid" id="modulesGrid">
+          <article class="module-card" data-category="frontend">
+            <div class="module-card__top">
+              <span class="module-card__tag">Фронтенд</span>
+              <span class="module-card__level">С нуля</span>
+            </div>
+            <h3 class="module-card__title">HTML, CSS и адаптивная вёрстка</h3>
+            <p class="module-card__text">Семантика, Flexbox и Grid, адаптив, БЭМ. Первые свёрстанные сайты в портфолио.</p>
+            <div class="module-card__meta">
+              <span>⏱ 6 недель</span>
+              <span>💻 20 практик</span>
+            </div>
+            <div class="module-card__price">14 900 ₽ <s>19 900 ₽</s></div>
+            <a href="#register" class="btn btn--small btn--primary">Выбрать модуль</a>
+          </article>
+
+          <article class="module-card" data-category="frontend">
+            <div class="module-card__top">
+              <span class="module-card__tag">Фронтенд</span>
+              <span class="module-card__level">Средний</span>
+            </div>
+            <h3 class="module-card__title">JavaScript и React</h3>
+            <p class="module-card__text">Современный JS, работа с API, состояние приложений, фреймворк React.</p>
+            <div class="module-card__meta">
+              <span>⏱ 10 недель</span>
+              <span>💻 30 практик</span>
+            </div>
+            <div class="module-card__price">24 900 ₽ <s>32 900 ₽</s></div>
+            <a href="#register" class="btn btn--small btn--primary">Выбрать модуль</a>
+          </article>
+
+          <article class="module-card" data-category="backend">
+            <div class="module-card__top">
+              <span class="module-card__tag">Бэкенд</span>
+              <span class="module-card__level">С нуля</span>
+            </div>
+            <h3 class="module-card__title">Python-разработка</h3>
+            <p class="module-card__text">Синтаксис, ООП, работа с базами данных, создание API на Flask и FastAPI.</p>
+            <div class="module-card__meta">
+              <span>⏱ 12 недель</span>
+              <span>💻 35 практик</span>
+            </div>
+            <div class="module-card__price">24 900 ₽ <s>34 900 ₽</s></div>
+            <a href="#register" class="btn btn--small btn--primary">Выбрать модуль</a>
+          </article>
+
+          <article class="module-card" data-category="backend">
+            <div class="module-card__top">
+              <span class="module-card__tag">Бэкенд</span>
+              <span class="module-card__level">Продвинутый</span>
+            </div>
+            <h3 class="module-card__title">Алгоритмы и системный дизайн</h3>
+            <p class="module-card__text">Структуры данных, сложность алгоритмов, подготовка к техническим собеседованиям.</p>
+            <div class="module-card__meta">
+              <span>⏱ 8 недель</span>
+              <span>💻 40 задач</span>
+            </div>
+            <div class="module-card__price">19 900 ₽ <s>26 900 ₽</s></div>
+            <a href="#register" class="btn btn--small btn--primary">Выбрать модуль</a>
+          </article>
+
+          <article class="module-card" data-category="data">
+            <div class="module-card__top">
+              <span class="module-card__tag">Аналитика</span>
+              <span class="module-card__level">С нуля</span>
+            </div>
+            <h3 class="module-card__title">Анализ данных на Python</h3>
+            <p class="module-card__text">Pandas, визуализация, статистика. Реальные кейсы из бизнеса в качестве проектов.</p>
+            <div class="module-card__meta">
+              <span>⏱ 9 недель</span>
+              <span>💻 25 практик</span>
+            </div>
+            <div class="module-card__price">19 900 ₽ <s>27 900 ₽</s></div>
+            <a href="#register" class="btn btn--small btn--primary">Выбрать модуль</a>
+          </article>
+
+          <article class="module-card" data-category="data">
+            <div class="module-card__top">
+              <span class="module-card__tag">Аналитика</span>
+              <span class="module-card__level">Средний</span>
+            </div>
+            <h3 class="module-card__title">SQL и базы данных</h3>
+            <p class="module-card__text">Проектирование схем, сложные запросы, оптимизация. Базы данных на реальных объёмах.</p>
+            <div class="module-card__meta">
+              <span>⏱ 6 недель</span>
+              <span>💻 30 задач</span>
+            </div>
+            <div class="module-card__price">14 900 ₽ <s>18 900 ₽</s></div>
+            <a href="#register" class="btn btn--small btn--primary">Выбрать модуль</a>
+          </article>
+        </div>
+        <p class="modules__empty" id="modulesEmpty" hidden>По выбранному фильтру модулей не найдено.</p>
+      </div>
+    </section>
+
+    <!-- ================= PROGRAM (ACCORDION) ================= -->
+    <section class="section program" id="program">
+      <div class="container">
+        <h2 class="section__title">Программа обучения</h2>
+        <p class="section__subtitle">9 месяцев • 6 этапов • от первых тегов до дипломного проекта</p>
+
+        <div class="accordion" id="accordion">
+
+          <div class="accordion__item">
+            <button class="accordion__header" type="button" aria-expanded="false">
+              <span class="accordion__number">01</span>
+              <span class="accordion__heading">Основы вёрстки: HTML и CSS</span>
+              <span class="accordion__chevron">+</span>
+            </button>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <p>4 недели. Учимся строить структуру страницы, работать со стилями, Flexbox и Grid. Первый проект — лендинг.</p>
+                <ul>
+                  <li>Семантические теги и доступность</li>
+                  <li>Flexbox, Grid и адаптивная вёрстка</li>
+                  <li>Методология БЭМ</li>
+                  <li>Проект: многостраничный сайт</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" type="button" aria-expanded="false">
+              <span class="accordion__number">02</span>
+              <span class="accordion__heading">JavaScript: база</span>
+              <span class="accordion__chevron">+</span>
+            </button>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <p>6 недель. Переменные, функции, массивы, объекты, DOM и события. Пишем интерактивные компоненты.</p>
+                <ul>
+                  <li>Типы данных, условия, циклы</li>
+                  <li>Функции и работа с DOM</li>
+                  <li>События и формы</li>
+                  <li>Проект: интерактивное приложение (таймер, список задач)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" type="button" aria-expanded="false">
+              <span class="accordion__number">03</span>
+              <span class="accordion__heading">Продвинутый JS и React</span>
+              <span class="accordion__chevron">+</span>
+            </button>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <p>8 недель. Асинхронность, запросы к API, компонентный подход и фреймворк React.</p>
+                <ul>
+                  <li>Промисы, async/await, fetch</li>
+                  <li>React: компоненты, хуки, роутинг</li>
+                  <li>Управление состоянием</li>
+                  <li>Проект: SPA-приложение с бэкендом</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" type="button" aria-expanded="false">
+              <span class="accordion__number">04</span>
+              <span class="accordion__heading">Бэкенд: Node.js и базы данных</span>
+              <span class="accordion__chevron">+</span>
+            </button>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <p>7 недель. Серверная разработка, REST API, работа с PostgreSQL, авторизация и деплой.</p>
+                <ul>
+                  <li>Node.js и Express</li>
+                  <li>PostgreSQL, проектирование схем</li>
+                  <li>Аутентификация и безопасность</li>
+                  <li>Деплой на облачный сервер</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" type="button" aria-expanded="false">
+              <span class="accordion__number">05</span>
+              <span class="accordion__heading">Алгоритмы и подготовка к собеседованиям</span>
+              <span class="accordion__chevron">+</span>
+            </button>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <p>5 недель. Структуры данных, задачи на алгоритмы, мок-интервью с ментором.</p>
+                <ul>
+                  <li>Сложность алгоритмов, Big O</li>
+                  <li>Массивы, строки, хеш-таблицы, деревья</li>
+                  <li>40 задач уровня Junior-интервью</li>
+                  <li>Мок-собеседования с разбором</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion__item">
+            <button class="accordion__header" type="button" aria-expanded="false">
+              <span class="accordion__number">06</span>
+              <span class="accordion__heading">Дипломный проект и карьерный трек</span>
+              <span class="accordion__chevron">+</span>
+            </button>
+            <div class="accordion__body">
+              <div class="accordion__content">
+                <p>4 недели. Полноценный проект под руководством ментора + оформление резюме и портфолио.</p>
+                <ul>
+                  <li>Командная разработка по Agile</li>
+                  <li>Код-ревью и защита проекта</li>
+                  <li>Резюме, GitHub, сопроводительные письма</li>
+                  <li>Рекомендации в партнёрские компании</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= REGISTER ================= -->
+    <section class="section register" id="register">
+      <div class="container register__inner">
+        <div class="register__info">
+          <h2 class="section__title section__title--left">Оставьте заявку</h2>
+          <p class="register__text">
+            Менеджер свяжется с вами в течение часа, поможет выбрать модуль
+            и ответит на все вопросы. Первое занятие — бесплатно.
+          </p>
+          <ul class="register__list">
+            <li> Бесплатная консультация</li>
+            <li> Рассрочка 0% на 12 месяцев</li>
+            <li> Возврат в первые 2 недели</li>
+          </ul>
+        </div>
+
+        <form class="form" id="registerForm" novalidate>
+          <div class="form__field">
+            <label class="form__label" for="name">Имя</label>
+            <input class="form__input" type="text" id="name" name="name" placeholder="Иван" autocomplete="name" />
+            <span class="form__error" data-error-for="name"></span>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="email">Email</label>
+            <input class="form__input" type="email" id="email" name="email" placeholder="ivan@example.com" autocomplete="email" />
+            <span class="form__error" data-error-for="email"></span>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="phone">Телефон</label>
+            <input class="form__input" type="tel" id="phone" name="phone" placeholder="+7 (900) 000-00-00" autocomplete="tel" />
+            <span class="form__error" data-error-for="phone"></span>
+          </div>
+
+          <div class="form__field">
+            <label class="form__label" for="module">Выберите модуль</label>
+            <select class="form__input form__select" id="module" name="module">
+              <option value="">— Выберите направление —</option>
+              <option value="html-css">HTML, CSS и адаптивная вёрстка</option>
+              <option value="js-react">JavaScript и React</option>
+              <option value="python">Python-разработка</option>
+              <option value="algorithms">Алгоритмы и системный дизайн</option>
+              <option value="data">Анализ данных на Python</option>
+              <option value="sql">SQL и базы данных</option>
+              <option value="full">Полный курс (все модули)</option>
+            </select>
+            <span class="form__error" data-error-for="module"></span>
+          </div>
+
+          <label class="form__checkbox">
+            <input type="checkbox" id="agree" name="agree" />
+            <span>Соглашаюсь с обработкой персональных данных</span>
+          </label>
+          <span class="form__error" data-error-for="agree"></span>
+
+          <button class="btn btn--primary btn--full" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= SUCCESS MODAL ================= -->
+  <div class="modal" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal__overlay" data-modal-close></div>
+    <div class="modal__dialog">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть">✕</button>
+      <div class="modal__icon">🎉</div>
+      <h3 class="modal__title" id="modalTitle">Заявка отправлена!</h3>
+      <p class="modal__text" id="modalText">Спасибо! Мы свяжемся с вами в течение часа.</p>
+      <button class="btn btn--primary" type="button" data-modal-close>Отлично</button>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__col">
+        <a href="#top" class="logo logo--footer">
+          <span class="logo__icon">&lt;/&gt;</span>
+          <span class="logo__text">CodeStart</span>
+        </a>
+        <p class="footer__text">Онлайн-школа программирования. Учим писать код и находить работу мечты.</p>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Навигация</h4>
+        <ul class="footer__list">
+          <li><a href="#program">Программа курса</a></li>
+          <li><a href="#modules">Модули</a></li>
+          <li><a href="#features">Преимущества</a></li>
+          <li><a href="#register">Регистрация</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Контакты</h4>
+        <ul class="footer__list">
+          <li><a href="/cdn-cgi/l/email-protection#5b333e3737341b38343f3e282f3a292f75292e"><span class="__cf_email__" data-cfemail="92faf7fefefdd2f1fdf6f7e1e6f3e0e6bce0e7">[email&#160;protected]</span></a></li>
+          <li><a href="tel:+78005553535">8 (800) 555-35-35</a></li>
+          <li>Москва, ул. Программистов, 42</li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 class="footer__title">Мы в соцсетях</h4>
+        <ul class="footer__list footer__social">
+          <li><a href="#">[ telegram ]</a></li>
+          <li><a href="#">[ vk ]</a></li>
+          <li><a href="#">[ youtube ]</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 CodeStart. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="js/script.js"></script>
+</body>
+</html>
